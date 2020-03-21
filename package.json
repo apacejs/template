@@ -1,0 +1,32 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "DEBUG=src/* supervisor node lib/app.js",
+    "start": "DEBUG=src/* node lib/app.js",
+    "ts:watch": "tsc -w",
+    "ts:build": "tsc",
+    "init": "npm run ts:build && DEBUG=* node lib/init/index.js",
+    "lint": "eslint src --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/express": "^4.17.3",
+    "@types/node": "^13.9.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@apacejs/jwt": "^1.0.0-beta.8",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "http-status-codes": "^1.4.0",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.24"
+  }
+}
