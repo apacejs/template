@@ -12,8 +12,8 @@ export default class Audit {
     @Column({ comment: '请求地址' })
     url: string;
 
-    @Column('datetime', { comment: '请求时间' })
-    datetime: Date;
+    @Column('datetime', { comment: '请求时间', name: 'request_time' })
+    requestTime: Date;
 
     @Column('varchar', { comment: '请求参数 body', default: '{}' })
     body: string;
