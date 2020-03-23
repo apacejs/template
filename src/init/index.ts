@@ -33,12 +33,10 @@ class InitScript {
         const a1 = new Audit()
         a1.url = 'http://lcoalhost:4000/user'
         a1.method = 'GET'
-        a1.datetime = new Date()
 
         const a2 = new Audit()
         a2.url = 'http://lcoalhost:4000/role'
         a2.method = 'GET'
-        a2.datetime = new Date()
 
         auditLog('save data one by one')
         await this.auditRepository.save(a1)
